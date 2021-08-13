@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="triton.aalto.fi" id="d88c39fa-cc14-4c32-bce4-abdee2019f46" port="22" nameFormat="DESCRIPTIVE" username="huangd5" />
+    </configs>
+  </component>
+</project>
