@@ -3,6 +3,7 @@ import sys
 import util
 import config
 import IHDP_preprocess
+import ACIC_preprocess
 import os
 
 
@@ -13,7 +14,7 @@ def main(Ntrain, Nquery, Ntest, Nacq, seed):
     
     print('-----')
 
-    train, query, test = IHDP_preprocess.get_IHDP_data(Ntrain, Nquery, Ntest, seed)
+    train, query, test = ACIC_preprocess.get_ACIC_data(Ntrain, Nquery, Ntest, seed)
 
     Ndec = 2
     model = util.initialize_nn_s(train['x'], train['y'], train['d'])
@@ -30,7 +31,7 @@ def main(Ntrain, Nquery, Ntest, Nacq, seed):
     print("entropy", H)
 
     print('Saving results...')
-    root_name = 'Sim/Single_VP_dropout0.05_GH10'
+    root_name = 'Sim/ACIC_Single_VP_GH10'
     if not os.path.exists(root_name):
         os.mkdir(root_name)
     np.save(root_name + '/acc_' + str(seed) + '.npy', acc)

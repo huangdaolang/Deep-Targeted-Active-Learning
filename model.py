@@ -128,8 +128,8 @@ class UNet(nn.Module):
         super(UNet, self).__init__()
 
         self.fc1 = ULinear(28, 30)
-        self.fc2_1 = ULinear(28, 100)
-        self.fc2_2 = ULinear(28, 100)
+        self.fc2_1 = ULinear(81, 100)
+        self.fc2_2 = ULinear(81, 100)
         self.fc3_1 = ULinear(100, 30)
         self.fc3_2 = ULinear(100, 30)
         self.fc4_1 = ULinear(30, 1)
